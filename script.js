@@ -1,0 +1,1 @@
+// Main script for Frontend Mentor Portfolio
