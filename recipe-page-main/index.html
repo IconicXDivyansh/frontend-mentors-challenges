@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../common-styles.css" />
+    <title>Frontend Mentor | Recipe page</title>
+
+    <style>
+      :root {
+        --white: hsl(0, 0%, 100%);
+        --stone-100: hsl(30, 54%, 90%);
+        --stone-150: hsl(30, 18%, 87%);
+        --stone-600: hsl(30, 10%, 34%);
+        --stone-900: hsl(24, 5%, 18%);
+        --brown-800: hsl(14, 45%, 36%);
+        --rose-800: hsl(332, 51%, 32%);
+        --rose-50: hsl(330, 100%, 98%);
+        --radius-regular: 8px;
+      }
+
+      /* Typography Related Styles */
+      @font-face {
+        font-family: "Outfit";
+        src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+          format("truetype");
+      }
+      @font-face {
+        font-family: "Young Serif";
+        src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+          format("truetype");
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        background: rgb(252, 232, 224);
+      }
+      .container {
+        max-width: 500px;
+        background: var(--white);
+      }
+      article h1,
+      h3 {
+        font-family: "Young Serif", serif;
+        font-weight: 500;
+      }
+      article h3 {
+        color: var(--brown-800);
+      }
+      article h4 {
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+      }
+
+      article h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        color: var(--stone-900);
+        margin-bottom: 0.5rem;
+      }
+      article h3 {
+        font-size: clamp(1.5rem, 3vw, 1.8rem);
+      }
+      article h4 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin-bottom: 0.3rem;
+      }
+
+      /* Content Related Styles */
+      .article-image img {
+        width: 100%;
+        /* border-radius: 8px; */
+      }
+
+      section.content {
+        padding: 1.5rem;
+        font-family: "Outfit", sans-serif;
+        line-height: 1.5;
+        color: var(--stone-600);
+      }
+      .attention {
+        background: var(--rose-50);
+        padding: 0.3rem 1rem;
+        border-radius: var(--radius-regular);
+      }
+      .attention h4 {
+        color: var(--rose-800);
+      }
+      li {
+        margin-block: 8px;
+        padding-left: 1.2rem;
+      }
+      .section {
+        margin-block: 2rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid var(--stone-150);
+      }
+      .section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .nutrition-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .nutrition-section ul li {
+        display: block;
+        justify-content: space-between;
+        padding-block: 0.5rem;
+        padding-inline: 1.5rem;
+        border-bottom: 1px solid var(--stone-150);
+      }
+      .nutrition-section ul li:last-of-type {
+        border-bottom: none;
+      }
+      .nutrition-section ul li div {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 2rem;
+      }
+      .nutrition-section ul li div span {
+        text-align: left;
+        width: 70px;
+        /* outline: 1px solid red; */
+      }
+      .rose-text {
+        color: var(--rose-800);
+        font-weight: 600;
+      }
+      footer {
+        background: var(--stone-150);
+        position: relative;
+        bottom: 6px;
+      }
+
+      @media screen and (min-width: 600px) {
+        .container {
+          padding: 1.5rem;
+        }
+        .article-image img {
+          border-radius: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body class="centered global-resets">
+    <main>
+      <div class="container centered">
+        <article class="flex-column centered">
+          <div class="article-image">
+            <img
+              src="./assets/images/image-omelette.jpeg"
+              alt="omelette picture"
+            />
+          </div>
+
+          <section class="content">
+            <div>
+              <h1>Simple Omelette Recipe</h1>
+              <p>
+                An easy and quick dish, perfect for any meal. This classic
+                omelette combines beaten eggs cooked to perfection, optionally
+                filled with your choice of cheese, vegetables, or meats.
+              </p>
+            </div>
+            <div class="attention">
+              <h4>Preparation time</h4>
+              <ul>
+                <li><strong>Total:</strong> Approximately 10 minutes</li>
+                <li><strong>Preparation:</strong> 5 minutes</li>
+                <li><strong>Cooking:</strong> 5 minutes</li>
+              </ul>
+            </div>
+            <div class="section ingredients-section">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>2-3 large eggs</li>
+                <li>Salt, to taste</li>
+                <li>Pepper, to taste</li>
+                <li>1 tablespoon of butter or oil</li>
+                <li>
+                  Optional fillings: cheese, diced vegetables, cooked meats,
+                  herbs
+                </li>
+              </ul>
+            </div>
+            <div class="section instructions-section">
+              <h3>Instructions</h3>
+              <ol>
+                <li>
+                  <strong>Beat the eggs:</strong> In a bowl, beat the eggs with
+                  a pinch of salt and pepper until they are well mixed. You can
+                  add a tablespoon of water or milk for a fluffier texture.
+                </li>
+                <li>
+                  <strong>Heat the pan:</strong> Place a non-stick frying pan
+                  over medium heat and add butter or oil.
+                </li>
+                <li>
+                  <strong>Cook the omelette:</strong> Once the butter is melted
+                  and bubbling, pour in the eggs. Tilt the pan to ensure the
+                  eggs evenly coat the surface.
+                </li>
+                <li>
+                  <strong>Add fillings (optional):</strong> When the eggs begin
+                  to set at the edges but are still slightly runny in the
+                  middle, sprinkle your chosen fillings over one half of the
+                  omelette.
+                </li>
+                <li>
+                  <strong>Fold and serve:</strong> As the omelette continues to
+                  cook, carefully lift one edge and fold it over the fillings.
+                  Let it cook for another minute, then slide it onto a plate.
+                </li>
+                <li>
+                  <strong>Enjoy:</strong> Serve hot, with additional salt and
+                  pepper if needed.
+                </li>
+              </ol>
+            </div>
+            <div class="section nutrition-section">
+              <h3>Nutrition</h3>
+              <p>
+                The table below shows nutritional values per serving without the
+                additional fillings.
+              </p>
+              <ul>
+                <li>
+                  <div>
+                    <span>Calories</span>
+                    <span class="rose-text">277kcal</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>Carbs</span>
+                    <span class="rose-text">0g</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>Protein</span>
+                    <span class="rose-text">20g</span>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <span>Fat</span>
+                    <span class="rose-text">22g</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/iconicxdivyansh">Divyansh Pingle</a>.
+      </div>
+    </footer>
+  </body>
+</html>

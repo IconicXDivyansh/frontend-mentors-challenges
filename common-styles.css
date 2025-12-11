@@ -1,5 +1,28 @@
+.global-resets{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 .centered{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+ footer{
+        position: fixed;
+        width: 100%;
+        bottom: 10px;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
 }
