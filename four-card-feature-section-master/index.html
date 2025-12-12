@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="../common-styles.css">
+  <title>Frontend Mentor | Four card feature section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      /* Color palette */
+      --red: hsl(0, 78%, 62%);
+      --cyan: hsl(180, 62%, 55%);
+      --orange: hsl(34, 97%, 64%);
+      --blue: hsl(212, 86%, 64%);
+
+      --grey-500: hsl(234, 12%, 34%);
+      --grey-400: hsl(212, 6%, 44%);
+      --white: hsl(0, 0%, 100%);
+
+      --wght-200: 200;
+      --wght-400: 400;
+      --wght-600: 600;
+    }
+    body{
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      padding: 1.5rem;
+    }
+    .heading{
+      font-size: clamp(1.5rem , 4vw, 2.5rem);
+    }
+    h1, h2{
+      color: var(--grey-500);
+    }
+    .heading-wrapper{
+      margin-bottom: 0.75rem;
+    }
+   
+    .header-section p{
+      color: var(--grey-500);
+    }
+    .light{
+      font-weight: var(--wght-200);
+    }
+    p{
+      font-weight: var(--wght-400);
+      color: var(--grey-400);
+    }
+    .cards-container{
+      margin-block: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card{
+      padding:2rem 1.5rem;
+      border-radius: 6px;
+      box-shadow: 2px 10px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-top: 4px solid;
+    }
+    .card-text{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .card img{
+      /* outline:1px solid; */
+      align-self: flex-end;
+      margin-inline-end: 1.5rem;
+    }
+    .card-1{
+      border-color: var(--cyan);
+    }
+    .card-2{
+      border-color: var(--red);
+    }
+    .card-3{
+      border-color: var(--orange);
+    }
+    .card-4{
+      border-color: var(--blue);
+    }
+    @media  screen and (min-width: 800px) {
+      .header-section{
+        text-align: center;
+      }
+      .header-section > p{
+        max-width: 50%;
+        margin: 0 auto;
+      }
+      .cards-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5,1fr);
+        max-width: 1378px;
+        margin-inline: auto;
+      }
+     .card-1{
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 2;
+     }
+     .card-2{
+      grid-column: 2 /span 1;
+      grid-row: 1 / span 2;
+     }
+     .card-3{
+      grid-column: 2 / span 1;
+      grid-row: 3 / span 2;
+     }
+     .card-4{
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 2;
+     }
+    .card-text p{
+      max-width: 90%;
+    }
+    }
+  </style>
+</head>
+
+<body class="centered global-resets">
+  <!-- Observations -> On Mobile Grid has 1Column , 4 rows / auto rows, On Desktop Grid has 3 columns and 5 rows -->
+  <main>
+    <section class="header-section">
+      <div class="heading-wrapper">
+        <p class="heading light">Reliable, efficient delivery</p>
+        <h1 class="heading">Powered by Technology</h1>
+      </div>
+      <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+    </section>
+    <section class="cards-container">
+      <div class="card card-1">
+        <div class="card-text">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+        </div>
+        <img src="./images/icon-supervisor.svg" alt="card svg icon">
+      </div>
+      <div class="card card-2">
+        <div class="card-text">
+          <h2>Team Builder</h2>
+          <p>Scans our talent network to create the optimal team for your project</p>
+        </div>
+        <img src="./images/icon-team-builder.svg" alt="card svg icon">
+      </div>
+      <div class="card card-3">
+        <div class="card-text">
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+        </div>
+        <img src="./images/icon-karma.svg" alt="card svg icon">
+      </div>
+      <div class="card card-4">
+        <div class="card-text">
+          <h2>Calculator</h2>
+          <p>Uses data from past projects to provide better delivery estimates</p>
+        </div>
+        <img src="./images/icon-calculator.svg" alt="card svg icon">
+      </div>
+    </section>
+  </main> 
+  
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
