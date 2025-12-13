@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../common-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | 3-column preview card component</title>
+    <style>
+      :root {
+        --gold-500: hsl(31, 77%, 52%);
+        --cyan-800: hsl(184, 100%, 22%);
+        --green-950: hsl(179, 100%, 13%);
+        --grey-100: hsl(0, 0%, 95%);
+        --white: hsla(0, 0%, 100%, 0.75);
+      }
+      body {
+        min-height: 100vh;
+        font-family: "Lexend Deca", sans-serif;
+        background: var(--grey-100);
+        font-size: 15px;
+      }
+      .wrapper {
+        margin: 5rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+      .card {
+        padding: 2rem;
+        color: var(--grey-100);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        min-width: 300px;
+      }
+      .card h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        text-transform: uppercase;
+        font-family: "Big Shoulders", cursive;
+        margin-bottom: 2rem;
+      }
+      .card p {
+        color: var(--white);
+        line-height: 1.6;
+        font-size: clamp(15px, 2vw, 18px);
+      }
+      .cta {
+        padding: 1rem 0 2rem 0;
+      }
+      .cta a {
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background: white;
+        border-radius: 2rem;
+        font-size: clamp(15px, 2vw, 18px);
+      }
+      .sedan {
+        background: var(--gold-500);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .sedan .cta a {
+        color: var(--gold-500);
+      }
+      .suv {
+        background: var(--cyan-800);
+      }
+      .suv .cta a {
+        color: var(--cyan-800);
+      }
+      .luxury {
+        background: var(--green-950);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .luxury .cta a {
+        color: var(--green-950);
+      }
+      @media screen and (min-width: 700px) {
+        .card.sedan {
+          border-top-left-radius: 12px;
+          border-bottom-left-radius: 12px;
+          border-top-right-radius: unset;
+          border-bottom-right-radius: unset;
+        }
+
+        .card.luxury {
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+          border-top-left-radius: unset;
+          border-bottom-left-radius: unset;
+        }
+
+        .cta {
+          margin-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="centered global-resets">
+    <main>
+      <div class="wrapper">
+        <div class="card sedan">
+          <div class="card-image">
+            <img src="./images/icon-sedans.svg" alt="Sedans Icon" />
+          </div>
+          <div class="card-content">
+            <h2>Sedans</h2>
+            <p>
+              Choose a sedan for its affordability and excellent fuel economy.
+              Ideal for cruising in the city or on your next road trip.
+            </p>
+          </div>
+          <div class="cta">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="card suv">
+          <div class="card-image">
+            <img src="./images/icon-suvs.svg" alt="SUVs Icon" />
+          </div>
+
+          <div class="card-content">
+            <h2>SUVs</h2>
+            <p>
+              Take an SUV for its spacious interior, power, and versatility.
+              Perfect for your next family vacation and off-road adventures.
+            </p>
+          </div>
+          <div class="cta">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="card luxury">
+          <div class="card-image">
+            <img src="./images/icon-luxury.svg" alt="Luxury Cars Icon" />
+          </div>
+          <div class="card-content">
+            <h2>Luxury</h2>
+            <p>
+              Cruise in the best car brands without the bloated prices. Enjoy
+              the enhanced comfort of a luxury rental and arrive in style.
+            </p>
+          </div>
+          <div class="cta">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/iconicxdivyansh">Divyansh Pingle</a>.
+      </div>
+    </footer>
+  </body>
+</html>
